@@ -8,18 +8,18 @@ number:
 date:
 consensus: true
 v: 3
-area: Transport
-workgroup: MASQUE
+area: ""
+workgroup: "Multiplexed Application Substrate over QUIC Encryption"
 keyword:
  - quic
  - http
  - proxy
  - reverse
 venue:
-  group: MASQUE
-  type: Working Group
-  mail: masque@ietf.org
-  arch: https://mailarchive.ietf.org/arch/browse/masque/
+  group: "Multiplexed Application Substrate over QUIC Encryption"
+  type: ""
+  mail: "masque@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/masque/"
   github: "yaroslavros/draft-masque-reverse-connect"
   latest: "https://yaroslavros.github.io/draft-masque-reverse-connect/draft-rosomakho-masque-reverse-connect.html"
 
