@@ -14,7 +14,7 @@
 <meta content="http" name="keyword">
 <meta content="proxy" name="keyword">
 <meta content="reverse" name="keyword">
-<meta content="draft-rosomakho-masque-reverse-connect" name="ietf.draft">
+<meta content="draft-rosomakho-masque-reverse-connect-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.25.0
     Python 3.12.8
@@ -1051,7 +1051,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Rosomakho</td>
-<td class="center">Expires 25 June 2025</td>
+<td class="center">Expires 26 June 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1059,17 +1059,17 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <div id="internal-metadata" class="document-information">
 <dl id="identifiers">
 <dt class="label-workgroup">Workgroup:</dt>
-<dd class="workgroup">MASQUE</dd>
+<dd class="workgroup">Multiplexed Application Substrate over QUIC Encryption</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-rosomakho-masque-reverse-connect</dd>
+<dd class="internet-draft">draft-rosomakho-masque-reverse-connect-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-12-22" class="published">22 December 2024</time>
+<time datetime="2024-12-23" class="published">23 December 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-06-25">25 June 2025</time></dd>
+<dd class="expires"><time datetime="2025-06-26">26 June 2025</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1091,10 +1091,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
         The latest revision of this draft can be found at <span><a href="https://yaroslavros.github.io/draft-masque-reverse-connect/draft-rosomakho-masque-reverse-connect.html">https://yaroslavros.github.io/draft-masque-reverse-connect/draft-rosomakho-masque-reverse-connect.html</a></span>.
-        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-rosomakho-masque-reverse/">https://datatracker.ietf.org/doc/draft-rosomakho-masque-reverse/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-rosomakho-masque-reverse-connect/">https://datatracker.ietf.org/doc/draft-rosomakho-masque-reverse-connect/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
-        MASQUE Working Group mailing list (<span><a href="mailto:masque@ietf.org">mailto:masque@ietf.org</a></span>),
+        Multiplexed Application Substrate over QUIC Encryption  mailing list (<span><a href="mailto:masque@ietf.org">mailto:masque@ietf.org</a></span>),
         which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/masque/">https://mailarchive.ietf.org/arch/browse/masque/</a></span>.
         Subscribe at <span><a href="https://www.ietf.org/mailman/listinfo/masque/">https://www.ietf.org/mailman/listinfo/masque/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
 <p id="section-note.1-4">Source for this draft and an issue tracker can be found at
@@ -1119,7 +1119,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 25 June 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 26 June 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1155,19 +1155,72 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-client-configuration" class="internal xref">Client Configuration</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-listener-control-channel" class="internal xref">Listener Control Channel</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-listener-control-channel-ur" class="internal xref">Listener Control Channel URI Template</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-establishing-listener-contr" class="internal xref">Establishing Listener Control Channel over HTTP/1.1</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-establishing-listener-contro" class="internal xref">Establishing Listener Control Channel over HTTP/2 and HTTP/3</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.4">
+                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-service-discovery" class="internal xref">Service Discovery</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-connection-lifecycle" class="internal xref">Connection Lifecycle</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-requesting-connection" class="internal xref">Requesting Connection</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-accepting-connection" class="internal xref">Accepting Connection</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2.2.1">
+                    <p id="section-toc.1-1.5.2.2.2.1.1"><a href="#section-5.2.1" class="auto internal xref">5.2.1</a>.  <a href="#name-accepting-connection-over-h" class="internal xref">Accepting Connection over HTTP/1.1</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2.2.2">
+                    <p id="section-toc.1-1.5.2.2.2.2.1"><a href="#section-5.2.2" class="auto internal xref">5.2.2</a>.  <a href="#name-accepting-connection-over-ht" class="internal xref">Accepting Connection over HTTP/2 and HTTP/3</a></p>
+</li>
+                </ul>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3">
+                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-establishing-connection" class="internal xref">Establishing Connection</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
+                <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="auto internal xref">7.1</a>.  <a href="#name-http-upgrade-tokens" class="internal xref">HTTP Upgrade Tokens</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2">
+                <p id="section-toc.1-1.7.2.2.1"><a href="#section-7.2" class="auto internal xref">7.2</a>.  <a href="#name-new-masque-default-template" class="internal xref">New MASQUE Default Templates</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.3">
+                <p id="section-toc.1-1.7.2.3.1"><a href="#section-7.3" class="auto internal xref">7.3</a>.  <a href="#name-new-masque-default-templates" class="internal xref">New MASQUE Default Templates</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
+            <p id="section-toc.1-1.9.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
 </li>
         </ul>
 </nav>
@@ -1178,7 +1231,129 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">TODO Introduction<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">Reverse HTTP CONNECT for TCP <span>[<a href="#TCP" class="cite xref">TCP</a>]</span> and UDP <span>[<a href="#UDP" class="cite xref">UDP</a>]</span> extends the traditional CONNECT method (see <span><a href="https://rfc-editor.org/rfc/rfc9110#section-9.3.6" class="relref">Section 9.3.6</a> of [<a href="#HTTP" class="cite xref">HTTP</a>]</span>) by enabling a proxy client to accept inbound TCP and UDP connections proxied through HTTP/1.1 <span>[<a href="#H1" class="cite xref">HTTP/1.1</a>]</span>, HTTP/2 <span>[<a href="#H2" class="cite xref">HTTP/2</a>]</span>, or HTTP/3 <span>[<a href="#H3" class="cite xref">HTTP/3</a>]</span>. In contrast to the traditional CONNECT method, which establishes outbound connections to remote servers, this extension facilitates inbound connections to the proxy client, allowing access to local or internal services.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">Unlike Proxying IP in HTTP <span>[<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span>, this approach simplifies deployment in dynamic or constrained network environments by removing reliance on IP routing. By eliminating the need for  routing configurations, this approach reduces operational complexity and allows for easier integration in scenarios where traditional IP routing is impractical. On top of that, Reverse HTTP CONNECT reduces overhead as it does not carry IP or transport layer headers.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">Since Reverse HTTP CONNECT is built on top of existing HTTP transport, it can be efficiently combined with outbound CONNECT and other HTTP communications.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">The primary use cases for this extension include:<a href="#section-1-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1-5.1">
+          <p id="section-1-5.1.1"><strong>Access to Local Services</strong>: A proxy client can expose its own local services by accepting inbound TCP or UDP connections from an HTTP server. For example, this can enable remote management  or access to local application servers that can only be accessed through an outbound connection to the proxy.<a href="#section-1-5.1.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<span id="name-accessing-local-client-serv"></span><div id="local-services">
+<figure id="figure-1">
+        <div id="section-1-6.1">
+          <div class="alignLeft art-svg artwork" id="section-1-6.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="128" width="472" viewBox="0 0 472 128" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+              <path d="M 8,32 L 8,112" fill="none" stroke="black"></path>
+              <path d="M 88,32 L 88,112" fill="none" stroke="black"></path>
+              <path d="M 360,32 L 360,112" fill="none" stroke="black"></path>
+              <path d="M 464,32 L 464,112" fill="none" stroke="black"></path>
+              <path d="M 8,32 L 88,32" fill="none" stroke="black"></path>
+              <path d="M 360,32 L 464,32" fill="none" stroke="black"></path>
+              <path d="M 72,48 L 120,48" fill="none" stroke="black"></path>
+              <path d="M 320,48 L 384,48" fill="none" stroke="black"></path>
+              <path d="M 80,64 L 128,64" fill="none" stroke="black"></path>
+              <path d="M 312,64 L 376,64" fill="none" stroke="black"></path>
+              <path d="M 80,80 L 128,80" fill="none" stroke="black"></path>
+              <path d="M 312,80 L 376,80" fill="none" stroke="black"></path>
+              <path d="M 72,96 L 384,96" fill="none" stroke="black"></path>
+              <path d="M 8,112 L 88,112" fill="none" stroke="black"></path>
+              <path d="M 360,112 L 464,112" fill="none" stroke="black"></path>
+              <path d="M 384,48 L 396,72" fill="none" stroke="black"></path>
+              <path d="M 384,96 L 396,72" fill="none" stroke="black"></path>
+              <polygon class="arrowhead" points="88,80 76,74.4 76,85.6" fill="black" transform="rotate(180,80,80)"></polygon>
+              <polygon class="arrowhead" points="88,64 76,58.4 76,69.6" fill="black" transform="rotate(180,80,64)"></polygon>
+              <g class="text">
+                <text x="156" y="52">Outbound</text>
+                <text x="212" y="52">HTTP</text>
+                <text x="276" y="52">connection</text>
+                <text x="40" y="68">Proxy</text>
+                <text x="160" y="68">Inbound</text>
+                <text x="208" y="68">TCP</text>
+                <text x="268" y="68">connection</text>
+                <text x="424" y="68">Proxy</text>
+                <text x="44" y="84">Client</text>
+                <text x="160" y="84">Inbound</text>
+                <text x="208" y="84">UDP</text>
+                <text x="268" y="84">connection</text>
+                <text x="428" y="84">Server</text>
+              </g>
+            </svg><a href="#section-1-6.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<a href="#name-accessing-local-client-serv" class="selfRef">Accessing local client services</a>
+        </figcaption></figure>
+</div>
+<ul class="normal">
+<li class="normal" id="section-1-7.1">
+          <p id="section-1-7.1.1"><strong>Gateway to Internal Networks</strong>: A proxy client acts as a gateway, facilitating access to internal network services provided over TCP or UDP connections. In this scenario, the proxy client forwards incoming connections originating from an HTTP server to specific internal services, enabling secure communication with private network resources.<a href="#section-1-7.1.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<span id="name-accessing-internal-services"></span><div id="internal-services">
+<figure id="figure-2">
+        <div id="section-1-8.1">
+          <div class="alignLeft art-svg artwork" id="section-1-8.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="160" width="584" viewBox="0 0 584 160" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+              <path d="M 8,48 L 8,96" fill="none" stroke="black"></path>
+              <path d="M 24,64 L 24,112" fill="none" stroke="black"></path>
+              <path d="M 40,80 L 40,128" fill="none" stroke="black"></path>
+              <path d="M 96,48 L 96,64" fill="none" stroke="black"></path>
+              <path d="M 112,64 L 112,80" fill="none" stroke="black"></path>
+              <path d="M 128,80 L 128,128" fill="none" stroke="black"></path>
+              <path d="M 168,32 L 168,144" fill="none" stroke="black"></path>
+              <path d="M 240,32 L 240,144" fill="none" stroke="black"></path>
+              <path d="M 472,64 L 472,144" fill="none" stroke="black"></path>
+              <path d="M 576,64 L 576,144" fill="none" stroke="black"></path>
+              <path d="M 168,32 L 240,32" fill="none" stroke="black"></path>
+              <path d="M 8,48 L 96,48" fill="none" stroke="black"></path>
+              <path d="M 24,64 L 112,64" fill="none" stroke="black"></path>
+              <path d="M 472,64 L 576,64" fill="none" stroke="black"></path>
+              <path d="M 40,80 L 128,80" fill="none" stroke="black"></path>
+              <path d="M 208,80 L 256,80" fill="none" stroke="black"></path>
+              <path d="M 456,80 L 496,80" fill="none" stroke="black"></path>
+              <path d="M 8,96 L 24,96" fill="none" stroke="black"></path>
+              <path d="M 136,96 L 264,96" fill="none" stroke="black"></path>
+              <path d="M 448,96 L 488,96" fill="none" stroke="black"></path>
+              <path d="M 24,112 L 40,112" fill="none" stroke="black"></path>
+              <path d="M 136,112 L 264,112" fill="none" stroke="black"></path>
+              <path d="M 448,112 L 488,112" fill="none" stroke="black"></path>
+              <path d="M 40,128 L 128,128" fill="none" stroke="black"></path>
+              <path d="M 208,128 L 496,128" fill="none" stroke="black"></path>
+              <path d="M 168,144 L 240,144" fill="none" stroke="black"></path>
+              <path d="M 472,144 L 576,144" fill="none" stroke="black"></path>
+              <path d="M 496,80 L 508,104" fill="none" stroke="black"></path>
+              <path d="M 496,128 L 508,104" fill="none" stroke="black"></path>
+              <polygon class="arrowhead" points="216,112 204,106.4 204,117.6" fill="black" transform="rotate(180,208,112)"></polygon>
+              <polygon class="arrowhead" points="216,96 204,90.4 204,101.6" fill="black" transform="rotate(180,208,96)"></polygon>
+              <polygon class="arrowhead" points="144,112 132,106.4 132,117.6" fill="black" transform="rotate(180,136,112)"></polygon>
+              <polygon class="arrowhead" points="144,96 132,90.4 132,101.6" fill="black" transform="rotate(180,136,96)"></polygon>
+              <g class="text">
+                <text x="200" y="52">Proxy</text>
+                <text x="204" y="68">Client</text>
+                <text x="292" y="84">Outbound</text>
+                <text x="348" y="84">HTTP</text>
+                <text x="412" y="84">connection</text>
+                <text x="84" y="100">Internal</text>
+                <text x="296" y="100">Inbound</text>
+                <text x="344" y="100">TCP</text>
+                <text x="404" y="100">connection</text>
+                <text x="536" y="100">Proxy</text>
+                <text x="84" y="116">Services</text>
+                <text x="296" y="116">Inbound</text>
+                <text x="344" y="116">UDP</text>
+                <text x="404" y="116">connection</text>
+                <text x="540" y="116">Server</text>
+              </g>
+            </svg><a href="#section-1-8.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
+<a href="#name-accessing-internal-services" class="selfRef">Accessing internal services through client</a>
+        </figcaption></figure>
+</div>
+<p id="section-1-9">As explained in the specification both use cases can be combined on the same proxy client.<a href="#section-1-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
@@ -1192,35 +1367,708 @@ described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</s
 appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="security-considerations">
+<div id="client-configuration">
 <section id="section-3">
-      <h2 id="name-security-considerations">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      <h2 id="name-client-configuration">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-client-configuration" class="section-name selfRef">Client Configuration</a>
       </h2>
-<p id="section-3-1">TODO Security<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">To use a Reverse Connect proxy HTTP clients are configured with two URI Templates <span>[<a href="#TEMPLATE" class="cite xref">TEMPLATE</a>]</span>:<a href="#section-3-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3-2.1">
+          <p id="section-3-2.1.1">Listener Control Channel described in <a href="#service-discovery" class="auto internal xref">Section 4.4</a><a href="#section-3-2.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-2.2">
+          <p id="section-3-2.2.1">Accepting Connection Requests described in <a href="#accepting-connection" class="auto internal xref">Section 5.2</a>.<a href="#section-3-2.2.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+</section>
+</div>
+<div id="listener-control-channel">
+<section id="section-4">
+      <h2 id="name-listener-control-channel">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-listener-control-channel" class="section-name selfRef">Listener Control Channel</a>
+      </h2>
+<p id="section-4-1">The Listener Control Channel enables the HTTP server to request the establishment of inbound TCP or UDP connections on the proxy client. This is necessary because the HTTP protocol inherently expects the client to initiate connections. To address this, the Listener Control Channel uses the Capsule Protocol (see <span><a href="https://rfc-editor.org/rfc/rfc9297#section-3.2" class="relref">Section 3.2</a> of [<a href="#HTTP-DGRAM" class="cite xref">HTTP-DGRAM</a>]</span>) to carry connection requests from the server to the client.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">Additionally, the Listener Control Channel can carry optional Service Discovery Capsules, which allow the proxy client to advertise available local or internal services to the HTTP server. This feature facilitates dynamic service discovery and ensures that the server has up-to-date information about the services accessible through the proxy client.<a href="#section-4-2" class="pilcrow">¶</a></p>
+<div id="listener-template">
+<section id="section-4.1">
+        <h3 id="name-listener-control-channel-ur">
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-listener-control-channel-ur" class="section-name selfRef">Listener Control Channel URI Template</a>
+        </h3>
+<p id="section-4.1-1">Listener Control Channel template is similar to the one defined in <span><a href="https://rfc-editor.org/rfc/rfc9484#section-3" class="relref">Section 3</a> of [<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span> and it <span class="bcp14">MAY</span> contain two variables: "target" and "ipproto". These variables are used to define the scope of network services that the client accepts connectivity for.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-2">Examples are shown below:<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+<span id="name-listener-control-channel-uri"></span><div id="fig-listen-template-examples">
+<figure id="figure-3">
+          <div class="alignLeft art-text artwork" id="section-4.1-3.1">
+<pre>
+https://example.org/.well-known/masque/listen/{target}/{ipproto}/
+https://proxy.example.org:4443/masque/listen?t={target}&amp;i={ipproto}
+https://proxy.example.org:4443/masque/listen{?target,ipproto}
+https://masque.example.org/?user=bob
+</pre>
+</div>
+<figcaption><a href="#figure-3" class="selfRef">Figure 3</a>:
+<a href="#name-listener-control-channel-uri" class="selfRef">Listener Control Channel URI Template Examples</a>
+          </figcaption></figure>
+</div>
+<p id="section-4.1-4">All template requirements listed in <span><a href="https://rfc-editor.org/rfc/rfc9484#section-3" class="relref">Section 3</a> of [<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span> apply here.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
+<p id="section-4.1-5">If set, the variable "target" <span class="bcp14">MUST</span> contain one of the following values:<a href="#section-4.1-5" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.1-6.1">
+            <p id="section-4.1-6.1.1">A hostname according to <span><a href="https://rfc-editor.org/rfc/rfc9484#section-4.6" class="relref">Section 4.6</a> of [<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span><a href="#section-4.1-6.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-4.1-6.2">
+            <p id="section-4.1-6.2.1">IPv4 or IPv6 prefix according to <span><a href="https://rfc-editor.org/rfc/rfc9484#section-4.6" class="relref">Section 4.6</a> of [<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span><a href="#section-4.1-6.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-4.1-6.3">
+            <p id="section-4.1-6.3.1">"*" that does not limit scope<a href="#section-4.1-6.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-4.1-6.4">
+            <p id="section-4.1-6.4.1">A wildcard: a domain name prefixed by "*.". This implies that client <span class="bcp14">MAY</span> accept inbound connection for any host in a given domain<a href="#section-4.1-6.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-4.1-6.5">
+            <p id="section-4.1-6.5.1">"." which means that the client will accept connections to local services only and will not forward requests to other hosts<a href="#section-4.1-6.5.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-4.1-7">If set, the variable "ipproto" <span class="bcp14">MUST</span> contain one of the following values:<a href="#section-4.1-7" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.1-8.1">
+            <p id="section-4.1-8.1.1">"6" which means that the client will only accept TCP connections<a href="#section-4.1-8.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-4.1-8.2">
+            <p id="section-4.1-8.2.1">"17" which means that the client will only accept UDP connections<a href="#section-4.1-8.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-4.1-8.3">
+            <p id="section-4.1-8.3.1">"*" which means that the client will accept both TCP and UDP connections.<a href="#section-4.1-8.3.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-4.1-9">As with <span>[<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span>, some client configurations for Reverse Connect proxies will only allow
+the user to configure the proxy host and proxy port. Clients with such
+limitations <span class="bcp14">MAY</span> attempt to access proxying capabilities using the default
+template, which is defined as:
+"https://$PROXY_HOST:$PROXY_PORT/.well-known/masque/listen/{target}/{ipproto}/",
+where $PROXY_HOST and $PROXY_PORT are the configured host and port of the
+proxy, respectively. Reverse Connect proxy deployments <span class="bcp14">SHOULD</span> offer service at this location
+if they need to interoperate with such clients.<a href="#section-4.1-9" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="establishing-listener-control-channel-over-http11">
+<section id="section-4.2">
+        <h3 id="name-establishing-listener-contr">
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-establishing-listener-contr" class="section-name selfRef">Establishing Listener Control Channel over HTTP/1.1</a>
+        </h3>
+<p id="section-4.2-1">When establishing the Listener Control Channel using HTTP/1.1 <span>[<a href="#H1" class="cite xref">HTTP/1.1</a>]</span>, the client follows the requirements from <span><a href="https://rfc-editor.org/rfc/rfc9484#section-4.2" class="relref">Section 4.2</a> of [<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span> but uses "connect-listen" as the value for the Upgrade header.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">For example, the client configured with the default URI Template "https://example.org/.well-known/masque/listen/{target}/{ipproto}/" can establish the Listener Control Channel for local TCP and UDP services by sending the following request:<a href="#section-4.2-2" class="pilcrow">¶</a></p>
+<span id="name-example-http-11-request"></span><div id="fig-req-h1">
+<figure id="figure-4">
+          <div class="lang-http-message sourcecode" id="section-4.2-3.1">
+<pre>
+GET https://example.org/.well-known/masque/listen/./*/ HTTP/1.1
+Host: example.org
+Connection: Upgrade
+Upgrade: connect-listen
+Capsule-Protocol: ?1
+</pre>
+</div>
+<figcaption><a href="#figure-4" class="selfRef">Figure 4</a>:
+<a href="#name-example-http-11-request" class="selfRef">Example HTTP/1.1 Request</a>
+          </figcaption></figure>
+</div>
+<p id="section-4.2-4">The server confirms successful registration of the client as described in <span><a href="https://rfc-editor.org/rfc/rfc9484#section-4.3" class="relref">Section 4.3</a> of [<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span>, but with "connect-listen" for the value for Upgrade header.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
+<p id="section-4.2-5">An example of the server confirming successful registration of the client is provided below:<a href="#section-4.2-5" class="pilcrow">¶</a></p>
+<span id="name-example-http-11-response"></span><div id="fig-resp-h1">
+<figure id="figure-5">
+          <div class="lang-http-message sourcecode" id="section-4.2-6.1">
+<pre>
+HTTP/1.1 101 Switching Protocols
+Connection: Upgrade
+Upgrade: connect-listen
+Capsule-Protocol: ?1
+</pre>
+</div>
+<figcaption><a href="#figure-5" class="selfRef">Figure 5</a>:
+<a href="#name-example-http-11-response" class="selfRef">Example HTTP/1.1 Response</a>
+          </figcaption></figure>
+</div>
+</section>
+</div>
+<div id="establishing-listener-control-channel-over-http2-and-http3">
+<section id="section-4.3">
+        <h3 id="name-establishing-listener-contro">
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-establishing-listener-contro" class="section-name selfRef">Establishing Listener Control Channel over HTTP/2 and HTTP/3</a>
+        </h3>
+<p id="section-4.3-1">When establishing Listener Control Channel using HTTP/2 <span>[<a href="#H2" class="cite xref">HTTP/2</a>]</span> or HTTP/3 <span>[<a href="#H3" class="cite xref">HTTP/3</a>]</span>, the client follows requirements from <span><a href="https://rfc-editor.org/rfc/rfc9484#section-4.4" class="relref">Section 4.4</a> of [<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span>, but uses "connect-listen" as the value for :protocol pseudo-header.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+<p id="section-4.3-2">For example, the client configured with the default URI Template "https://example.org/.well-known/masque/listen/{target}/{ipproto}/" can establish the Listener Control Channel for local TCP and UDP services by sending the following request:<a href="#section-4.3-2" class="pilcrow">¶</a></p>
+<span id="name-example-http-2-or-http-3-re"></span><div id="fig-req-h2">
+<figure id="figure-6">
+          <div class="lang-http-message sourcecode" id="section-4.3-3.1">
+<pre>
+HEADERS
+:method = CONNECT
+:protocol = connect-listen
+:scheme = https
+:path = /.well-known/masque/listen/./*/
+:authority = example.org
+capsule-protocol = ?1
+</pre>
+</div>
+<figcaption><a href="#figure-6" class="selfRef">Figure 6</a>:
+<a href="#name-example-http-2-or-http-3-re" class="selfRef">Example HTTP/2 or HTTP/3 Request</a>
+          </figcaption></figure>
+</div>
+<p id="section-4.3-4">The server indicates a successful registration of the client as described in <span><a href="https://rfc-editor.org/rfc/rfc9484#section-4.5" class="relref">Section 4.5</a> of [<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span>.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
+<p id="section-4.3-5">Example of server confirming succesful registration of the client is provided below:<a href="#section-4.3-5" class="pilcrow">¶</a></p>
+<span id="name-example-http-2-or-http-3-res"></span><div id="fig-resp-h2">
+<figure id="figure-7">
+          <div class="lang-http-message sourcecode" id="section-4.3-6.1">
+<pre>
+HEADERS
+:status = 200
+capsule-protocol = ?1
+</pre>
+</div>
+<figcaption><a href="#figure-7" class="selfRef">Figure 7</a>:
+<a href="#name-example-http-2-or-http-3-res" class="selfRef">Example HTTP/2 or HTTP/3 Response</a>
+          </figcaption></figure>
+</div>
+</section>
+</div>
+<div id="service-discovery">
+<section id="section-4.4">
+        <h3 id="name-service-discovery">
+<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-service-discovery" class="section-name selfRef">Service Discovery</a>
+        </h3>
+<p id="section-4.4-1">The Reverse Connect client <span class="bcp14">MAY</span> advertise offered TCP and UDP services to the proxy server through the AVAILABLE_SERVICES Capsule over the established Listener Control Channel. This information serves as a hint for the proxy server and does not constrain the server from attempting to connect to services that were not advertised. The presence of a service in the AVAILABLE_SERVICES list does not guarantee actual service availability, as the client may not be able to track the health of the service.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.4-2">Capsule format for AVAILABLE_SERVICES is the following:<a href="#section-4.4-2" class="pilcrow">¶</a></p>
+<span id="name-available_services-capsule-"></span><div id="available-services-format">
+<figure id="figure-8">
+          <div class="alignLeft art-text artwork" id="section-4.4-3.1">
+<pre>
+AVAILABLE_SERVICES Capsule {
+  Type (i) = 0xTBD,
+  Length (i),
+  Service (..) ...,
+}
+</pre>
+</div>
+<figcaption><a href="#figure-8" class="selfRef">Figure 8</a>:
+<a href="#name-available_services-capsule-" class="selfRef">AVAILABLE_SERVICES Capsule Format</a>
+          </figcaption></figure>
+</div>
+<p id="section-4.4-4">The AVAILABLE_SERVICES capsule contains a sequence of zero or more Services.<a href="#section-4.4-4" class="pilcrow">¶</a></p>
+<span id="name-service-format"></span><div id="service-format">
+<figure id="figure-9">
+          <div class="alignLeft art-text artwork" id="section-4.4-5.1">
+<pre>
+Service {
+  Destination Type (8),
+  Destination (..),
+  Protocol (8),
+  Port (16),
+}
+</pre>
+</div>
+<figcaption><a href="#figure-9" class="selfRef">Figure 9</a>:
+<a href="#name-service-format" class="selfRef">Service Format</a>
+          </figcaption></figure>
+</div>
+<p id="section-4.4-6">Each service record represents potential connection destination and contains the following fields:<a href="#section-4.4-6" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-4.4-7">
+          <dt id="section-4.4-7.1">Destination Type:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.4-7.2">
+            <p id="section-4.4-7.2.1">A single byte value defining type and format of Destination field. Valid destination types are:
+- 0: Destination is local for the client
+- 1: Destination is specified by a hostname
+- 4: Destination is specified by an IPv4 address
+- 6: Destination is specified by an IPv6 address<a href="#section-4.4-7.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-4.4-7.3">Destination:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.4-7.4">
+            <p id="section-4.4-7.4.1">Contents of the Destination field is determined by the Destination Type. For local destination type destination contents is omitted. IPv4 destination carries 32 bits of IPv4 address. IPv6 destination carries 128 bits of IPv6 address. Hostname destination (destination type 1) is provided in the following format:<a href="#section-4.4-7.4.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<span id="name-hostname-destination-format"></span><div id="hostname-destination-format">
+<figure id="figure-10">
+          <div class="alignLeft art-text artwork" id="section-4.4-8.1">
+<pre>
+Hostname_Destination {
+  Length (i),
+  Hostname (..),
+}
+</pre>
+</div>
+<figcaption><a href="#figure-10" class="selfRef">Figure 10</a>:
+<a href="#name-hostname-destination-format" class="selfRef">Hostname Destination Format</a>
+          </figcaption></figure>
+</div>
+<p id="section-4.4-9">Length is encoded as a variable-length integer and Hostname contains the hostname string.<a href="#section-4.4-9" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-4.4-10">
+          <dt id="section-4.4-10.1">Protocol:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.4-10.2">
+            <p id="section-4.4-10.2.1">A single byte value of 6 for TCP and 17 for UDP.<a href="#section-4.4-10.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-4.4-10.3">Port:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.4-10.4">
+            <p id="section-4.4-10.4.1">Two bytes value of target TCP or UDP port.<a href="#section-4.4-10.4.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-4.4-11">AVAILABLE_SERVICES messages are not incremental. A new message completely overwrites the previous hint.<a href="#section-4.4-11" class="pilcrow">¶</a></p>
+<p id="section-4.4-12">If any of the capsule fields are malformed upon reception, the server <span class="bcp14">MUST</span> follow the error-handling procedure defined in <span><a href="https://rfc-editor.org/rfc/rfc9297#section-3.3" class="relref">Section 3.3</a> of [<a href="#HTTP-DGRAM" class="cite xref">HTTP-DGRAM</a>]</span>.<a href="#section-4.4-12" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="connection-lifecycle">
+<section id="section-5">
+      <h2 id="name-connection-lifecycle">
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-connection-lifecycle" class="section-name selfRef">Connection Lifecycle</a>
+      </h2>
+<div id="requesting-connection">
+<section id="section-5.1">
+        <h3 id="name-requesting-connection">
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-requesting-connection" class="section-name selfRef">Requesting Connection</a>
+        </h3>
+<p id="section-5.1-1">To request a new outbound connection from the client for an inbound TCP or UDP session, the server sends a CONNECTION_REQUEST Capsule. The CONNECTION_REQUEST Capsule is defined as follows:<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+<span id="name-connection_request-capsule-"></span><div id="connection-request-format">
+<figure id="figure-11">
+          <div class="alignLeft art-text artwork" id="section-5.1-2.1">
+<pre>
+CONNECTION_REQUEST Capsule {
+  Type (i) = 0xTBD,
+  Length (i),
+  Request ID (i),
+  Service (..),
+}
+</pre>
+</div>
+<figcaption><a href="#figure-11" class="selfRef">Figure 11</a>:
+<a href="#name-connection_request-capsule-" class="selfRef">CONNECTION_REQUEST Capsule Format</a>
+          </figcaption></figure>
+</div>
+<span class="break"></span><dl class="dlParallel" id="section-5.1-3">
+          <dt id="section-5.1-3.1">Request ID:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.1-3.2">
+            <p id="section-5.1-3.2.1">A unique request identifier, encoded as a variable-length integer. The Request ID <span class="bcp14">MUST</span> be unique for a given Listener Control Channel.<a href="#section-5.1-3.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-5.1-3.3">Service:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.1-3.4">
+            <p id="section-5.1-3.4.1">Connection destination as described in <a href="#service-discovery" class="auto internal xref">Section 4.4</a>.<a href="#section-5.1-3.4.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-5.1-4">If any of the capsule fields are malformed upon reception, or if the Request ID has been previously used on the same Listener Control Channel, the client <span class="bcp14">MUST</span> follow the error-handling procedure defined in <span><a href="https://rfc-editor.org/rfc/rfc9297#section-3.3" class="relref">Section 3.3</a> of [<a href="#HTTP-DGRAM" class="cite xref">HTTP-DGRAM</a>]</span>.<a href="#section-5.1-4" class="pilcrow">¶</a></p>
+<p id="section-5.1-5">If the client declines the connection request it responds with a CONNECTION_REQUEST_DECLINED Capsule in the following format:<a href="#section-5.1-5" class="pilcrow">¶</a></p>
+<span id="name-connection_request_declined"></span><div id="connection-request-declined-format">
+<figure id="figure-12">
+          <div class="alignLeft art-text artwork" id="section-5.1-6.1">
+<pre>
+CONNECTION_REQUEST_DECLINED Capsule {
+  Type (i) = 0xTBD,
+  Length (i),
+  Request ID (i),
+}
+</pre>
+</div>
+<figcaption><a href="#figure-12" class="selfRef">Figure 12</a>:
+<a href="#name-connection_request_declined" class="selfRef">CONNECTION_REQUEST_DECLINED Capsule Format</a>
+          </figcaption></figure>
+</div>
+<p id="section-5.1-7">If any of the capsule fields are malformed upon reception, or if the  Request ID does not correspond to an outstanding CONNECTION_REQUEST on the same Listener Control Channel, the server <span class="bcp14">MUST</span> follow the error-handling procedure defined in <span><a href="https://rfc-editor.org/rfc/rfc9297#section-3.3" class="relref">Section 3.3</a> of [<a href="#HTTP-DGRAM" class="cite xref">HTTP-DGRAM</a>]</span>.<a href="#section-5.1-7" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="accepting-connection">
+<section id="section-5.2">
+        <h3 id="name-accepting-connection">
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-accepting-connection" class="section-name selfRef">Accepting Connection</a>
+        </h3>
+<p id="section-5.2-1">To accept the inbound connection, the client sends a new outbound request to the server. This request uses an Accepting Connection URI Template <span>[<a href="#TEMPLATE" class="cite xref">TEMPLATE</a>]</span>. The URI Template <span class="bcp14">MUST</span> contain "request_id" variable.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.2-2">Examples are shown below:<a href="#section-5.2-2" class="pilcrow">¶</a></p>
+<span id="name-accepting-connection-uri-te"></span><div id="fig-accepting-template-examples">
+<figure id="figure-13">
+          <div class="alignLeft art-text artwork" id="section-5.2-3.1">
+<pre>
+https://example.org/.well-known/masque/accept/{request_id}/
+https://proxy.example.org:4443/masque/accept?id={request_id}
+https://proxy.example.org:4443/masque/accept{?request_id}
+https://masque.example.org/?user=bob&amp;request_id={request_id}
+</pre>
+</div>
+<figcaption><a href="#figure-13" class="selfRef">Figure 13</a>:
+<a href="#name-accepting-connection-uri-te" class="selfRef">Accepting Connection URI Template Examples</a>
+          </figcaption></figure>
+</div>
+<p id="section-5.2-4">The following requirements apply to the Accepting Connection URI Template:<a href="#section-5.2-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2-5.1">
+            <p id="section-5.2-5.1.1">The URI Template <span class="bcp14">MUST</span> be a level 3 template or lower.<a href="#section-5.2-5.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.2-5.2">
+            <p id="section-5.2-5.2.1">The URI Template <span class="bcp14">MUST</span> be in absolute form and <span class="bcp14">MUST</span> include non-empty scheme, authority, and path components.<a href="#section-5.2-5.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.2-5.3">
+            <p id="section-5.2-5.3.1">The path component of the URI Template <span class="bcp14">MUST</span> start with a slash "/".<a href="#section-5.2-5.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.2-5.4">
+            <p id="section-5.2-5.4.1">All template variables <span class="bcp14">MUST</span> be within the path or query components of the URI.<a href="#section-5.2-5.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.2-5.5">
+            <p id="section-5.2-5.5.1">The URI Template <span class="bcp14">MUST</span> contain variable "request_id" and <span class="bcp14">MAY</span> contain other variables.<a href="#section-5.2-5.5.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.2-5.6">
+            <p id="section-5.2-5.6.1">The URI Template <span class="bcp14">MUST NOT</span> contain any non-ASCII Unicode characters and <span class="bcp14">MUST</span> only contain ASCII characters in the range 0x21-0x7E inclusive (note that percent-encoding is allowed; see <span><a href="https://rfc-editor.org/rfc/rfc3986#section-2.1" class="relref">Section 2.1</a> of [<a href="#URI" class="cite xref">URI</a>]</span>.<a href="#section-5.2-5.6.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.2-5.7">
+            <p id="section-5.2-5.7.1">The URI Template <span class="bcp14">MUST NOT</span> use Reserved Expansion ("+" operator), Fragment Expansion ("#" operator), Label Expansion with Dot-Prefix, Path Segment Expansion with Slash-Prefix, nor Path-Style Parameter Expansion with Semicolon-Prefix.<a href="#section-5.2-5.7.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-5.2-6">Clients <span class="bcp14">SHOULD</span> validate the requirements above; however, clients <span class="bcp14">MAY</span> use a general-purpose URI Template implementation that lacks this specific validation.  If a client detects that any of the requirements above are not met by a URI Template, the client <span class="bcp14">MUST</span> reject its configuration and abort the request without sending it to the IP proxy.<a href="#section-5.2-6" class="pilcrow">¶</a></p>
+<p id="section-5.2-7">As with <span>[<a href="#CONNECT-IP" class="cite xref">CONNECT-IP</a>]</span>, some client configurations for Reverse Connect proxies will only allow
+the user to configure the proxy host and proxy port. Clients with such
+limitations <span class="bcp14">MAY</span> attempt to access proxying capabilities using the default
+template, which is defined as:
+"https://$PROXY_HOST:$PROXY_PORT/.well-known/masque/accept/{request_id}/",
+where $PROXY_HOST and $PROXY_PORT are the configured host and port of the
+proxy, respectively. Reverse Connect proxy deployments <span class="bcp14">SHOULD</span> offer service at this location
+if they need to interoperate with such clients.<a href="#section-5.2-7" class="pilcrow">¶</a></p>
+<div id="accepting-connection-over-http11">
+<section id="section-5.2.1">
+          <h4 id="name-accepting-connection-over-h">
+<a href="#section-5.2.1" class="section-number selfRef">5.2.1. </a><a href="#name-accepting-connection-over-h" class="section-name selfRef">Accepting Connection over HTTP/1.1</a>
+          </h4>
+<p id="section-5.2.1-1">When accepting an inbound connection over HTTP/1.1 <span>[<a href="#H1" class="cite xref">HTTP/1.1</a>]</span>, the client sends to the proxy a new request as follows:<a href="#section-5.2.1-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2.1-2.1">
+              <p id="section-5.2.1-2.1.1">The method <span class="bcp14">SHALL</span> be "GET"<a href="#section-5.2.1-2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.1-2.2">
+              <p id="section-5.2.1-2.2.1">The request <span class="bcp14">SHALL</span> include a single "Host" header field containing the origin of the proxy.<a href="#section-5.2.1-2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.1-2.3">
+              <p id="section-5.2.1-2.3.1">The request <span class="bcp14">SHALL</span> include a "Connection" header field with the value "Upgrade" (note that this requirement is case-insensitive as per <span><a href="https://rfc-editor.org/rfc/rfc9110#section-7.6.1" class="relref">Section 7.6.1</a> of [<a href="#HTTP" class="cite xref">HTTP</a>]</span>).<a href="#section-5.2.1-2.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.1-2.4">
+              <p id="section-5.2.1-2.4.1">The request <span class="bcp14">SHALL</span> include an Upgrade header field with value "connect-accept".<a href="#section-5.2.1-2.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-5.2.1-3">A request that does not match the above restrictions is considered malformed. A proxy server receiving a malformed request <span class="bcp14">MUST</span> respond with an error and <span class="bcp14">SHOULD</span> use the 400 (Bad Request) status code. If <code>request_id</code> template variable is not matching an outstanding connection request for given client, proxy server <span class="bcp14">MUST</span> respond with an error and <span class="bcp14">SHOULD</span> use the 404 (Not Found) status code.<a href="#section-5.2.1-3" class="pilcrow">¶</a></p>
+<p id="section-5.2.1-4">The proxy <span class="bcp14">SHALL</span> indicate a successful response by replying with the following requirements:<a href="#section-5.2.1-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2.1-5.1">
+              <p id="section-5.2.1-5.1.1">The HTTP status code on the response <span class="bcp14">SHALL</span> be 101 (Switching Protocols).<a href="#section-5.2.1-5.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.1-5.2">
+              <p id="section-5.2.1-5.2.1">The response <span class="bcp14">SHALL</span> include a Connection header field with value "Upgrade" (note that this requirement is case-insensitive as per <span><a href="https://rfc-editor.org/rfc/rfc9110#section-7.6.1" class="relref">Section 7.6.1</a> of [<a href="#HTTP" class="cite xref">HTTP</a>]</span>).<a href="#section-5.2.1-5.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.1-5.3">
+              <p id="section-5.2.1-5.3.1">The response <span class="bcp14">SHALL</span> include a single Upgrade header with value "connect-accept".<a href="#section-5.2.1-5.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.1-5.4">
+              <p id="section-5.2.1-5.4.1">The response <span class="bcp14">SHALL</span> meet the requirements of HTTP responses that start the Capsule Protocol according to <span><a href="https://rfc-editor.org/rfc/rfc9297#section-3.2" class="relref">Section 3.2</a> of [<a href="#HTTP-DGRAM" class="cite xref">HTTP-DGRAM</a>]</span>.<a href="#section-5.2.1-5.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-5.2.1-6">A response that does not match these requirements <span class="bcp14">MUST</span> be treated as failed and corresponding connection <span class="bcp14">MUST</span> be aborted by the client.<a href="#section-5.2.1-6" class="pilcrow">¶</a></p>
+<p id="section-5.2.1-7">For example, the client configured with the URI Template "https://example.org/.well-known/masque/accept/{request_id}/" can accept the inbound Connection as a response to a connection request with Request ID 1:<a href="#section-5.2.1-7" class="pilcrow">¶</a></p>
+<span id="name-example-http-11-request-acc"></span><div id="fig-req-accept-h1">
+<figure id="figure-14">
+            <div class="lang-http-message sourcecode" id="section-5.2.1-8.1">
+<pre>
+GET https://example.org/.well-known/masque/accept/1/ HTTP/1.1
+Host: example.org
+Connection: Upgrade
+Upgrade: connect-accept
+Capsule-Protocol: ?1
+</pre>
+</div>
+<figcaption><a href="#figure-14" class="selfRef">Figure 14</a>:
+<a href="#name-example-http-11-request-acc" class="selfRef">Example HTTP/1.1 Request Accepting Connection</a>
+            </figcaption></figure>
+</div>
+<p id="section-5.2.1-9">The proxy server could respond with the following:<a href="#section-5.2.1-9" class="pilcrow">¶</a></p>
+<span id="name-example-http-11-response-ac"></span><div id="fig-resp-accept-h1">
+<figure id="figure-15">
+            <div class="lang-http-message sourcecode" id="section-5.2.1-10.1">
+<pre>
+HTTP/1.1 101 Switching Protocols
+Connection: Upgrade
+Upgrade: connect-accept
+Capsule-Protocol: ?1
+</pre>
+</div>
+<figcaption><a href="#figure-15" class="selfRef">Figure 15</a>:
+<a href="#name-example-http-11-response-ac" class="selfRef">Example HTTP/1.1 Response Accepting Connection</a>
+            </figcaption></figure>
+</div>
+</section>
+</div>
+<div id="accepting-connection-over-http2-and-http3">
+<section id="section-5.2.2">
+          <h4 id="name-accepting-connection-over-ht">
+<a href="#section-5.2.2" class="section-number selfRef">5.2.2. </a><a href="#name-accepting-connection-over-ht" class="section-name selfRef">Accepting Connection over HTTP/2 and HTTP/3</a>
+          </h4>
+<p id="section-5.2.2-1">When accepting an inbound connection over HTTP/2 <span>[<a href="#H2" class="cite xref">HTTP/2</a>]</span> or HTTP/3 <span>[<a href="#H3" class="cite xref">HTTP/3</a>]</span>, the client sends to the proxy a request on a new Stream of the connection that carries the Listener Control Channel as follows:<a href="#section-5.2.2-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2.2-2.1">
+              <p id="section-5.2.2-2.1.1">The :method pseudo-header field <span class="bcp14">SHALL</span> be "CONNECT".<a href="#section-5.2.2-2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.2-2.2">
+              <p id="section-5.2.2-2.2.1">The :protocol pseudo-header field <span class="bcp14">SHALL</span> be "connect-accept".<a href="#section-5.2.2-2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.2-2.3">
+              <p id="section-5.2.2-2.3.1">The :authority pseudo-header field <span class="bcp14">SHALL</span> contain the authority of the proxy.<a href="#section-5.2.2-2.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.2-2.4">
+              <p id="section-5.2.2-2.4.1">The :path and :scheme pseudo-header fields <span class="bcp14">SHALL</span> contain the path and scheme of the request URI derived from the Accepting Connection URI template for the proxy.<a href="#section-5.2.2-2.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-5.2.2-3">A request that does not match the above restrictions is considered malformed. A proxy server recieving a malformed request <span class="bcp14">MUST</span> respond with an error and <span class="bcp14">SHOULD</span> use the 400 (Bad Request) status code. If <code>request_id</code> template variable is not matching an outstanding connection request for given client, proxy server <span class="bcp14">MUST</span> respond with an error and <span class="bcp14">SHOULD</span> use the 404 (Not Found) status code.<a href="#section-5.2.2-3" class="pilcrow">¶</a></p>
+<p id="section-5.2.2-4">The proxy <span class="bcp14">SHALL</span> indicate a successful response by replying with the following requirements:<a href="#section-5.2.2-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2.2-5.1">
+              <p id="section-5.2.2-5.1.1">The HTTP status code on the response <span class="bcp14">SHALL</span> be in 2xx (Successful) range.<a href="#section-5.2.2-5.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.2-5.2">
+              <p id="section-5.2.2-5.2.1">The response <span class="bcp14">SHALL</span> meet the requirements of HTTP responses that start the Capsule Protocol according to <span><a href="https://rfc-editor.org/rfc/rfc9297#section-3.2" class="relref">Section 3.2</a> of [<a href="#HTTP-DGRAM" class="cite xref">HTTP-DGRAM</a>]</span>.<a href="#section-5.2.2-5.2.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-5.2.2-6">A response that does not match these requirements <span class="bcp14">MUST</span> be treated as failed and corresponding connection <span class="bcp14">MUST</span> be aborted by the client.<a href="#section-5.2.2-6" class="pilcrow">¶</a></p>
+<p id="section-5.2.2-7">For example, the client configured with the URI Template "https://example.org/.well-known/masque/accept/{request_id}/" can accept the inbound Connection as a response to a connection request with Request ID 1:<a href="#section-5.2.2-7" class="pilcrow">¶</a></p>
+<span id="name-example-http-2-or-http-3-req"></span><div id="fig-req-accept-h2">
+<figure id="figure-16">
+            <div class="lang-http-message sourcecode" id="section-5.2.2-8.1">
+<pre>
+HEADERS
+:method = CONNECT
+:protocol = connect-accept
+:scheme = https
+:path = /.well-known/masque/accept/1/
+:authority = example.org
+capsule-Protocol = ?1
+</pre>
+</div>
+<figcaption><a href="#figure-16" class="selfRef">Figure 16</a>:
+<a href="#name-example-http-2-or-http-3-req" class="selfRef">Example HTTP/2 or HTTP/3 Request Accepting Connection</a>
+            </figcaption></figure>
+</div>
+<p id="section-5.2.2-9">The proxy server could respond with the following:<a href="#section-5.2.2-9" class="pilcrow">¶</a></p>
+<span id="name-example-http-2-or-http-3-resp"></span><div id="fig-resp-accept-h2">
+<figure id="figure-17">
+            <div class="lang-http-message sourcecode" id="section-5.2.2-10.1">
+<pre>
+HEADERS
+:status = 200
+capsule-Protocol = ?1
+</pre>
+</div>
+<figcaption><a href="#figure-17" class="selfRef">Figure 17</a>:
+<a href="#name-example-http-2-or-http-3-resp" class="selfRef">Example HTTP/2 or HTTP/3 Response Accepting Connection</a>
+            </figcaption></figure>
+</div>
+</section>
+</div>
+</section>
+</div>
+<div id="establishing-connection">
+<section id="section-5.3">
+        <h3 id="name-establishing-connection">
+<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-establishing-connection" class="section-name selfRef">Establishing Connection</a>
+        </h3>
+<p id="section-5.3-1">Once the client receives a succesful response from the proxy for the request accepting the connection it estbalishes requested TCP or UDP socket to a local or internal destiantion. If the socket failed to establish, the client <span class="bcp14">MUST</span> immediately close the request stream.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-2">For TCP flows, communicating parties carry TCP payload data in the payload of DATA Capsules over the established stream according to <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-connect-tcp-06#section-8.3" class="relref">Section 8.3</a> of [<a href="#Template-TCPCONNECT" class="cite xref">Template-TCPCONNECT</a>]</span>. Either party <span class="bcp14">MAY</span> close the stream if TCP connection is terminated.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
+<p id="section-5.3-3">UDP data is carried in DATAGRAM capsules or encoded in QUIC DATAGRAM frames as exaplained in <span><a href="https://rfc-editor.org/rfc/rfc9298#section-5" class="relref">Section 5</a> of [<a href="#CONNECT-UDP" class="cite xref">CONNECT-UDP</a>]</span>. The lifetime of the UDP socket is tied to the request stream as described in <span><a href="https://rfc-editor.org/rfc/rfc9298#section-3.1" class="relref">Section 3.1</a> of [<a href="#CONNECT-UDP" class="cite xref">CONNECT-UDP</a>]</span>.<a href="#section-5.3-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="security-considerations">
+<section id="section-6">
+      <h2 id="name-security-considerations">
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      </h2>
+<p id="section-6-1">Proxy servers providing Reverse HTTP Connect services <span class="bcp14">MUST</span> restrict their services to authenticated users. An unauthorized user accepting an inbound connection from the proxy server may cause availability risks and compromise the wider systems by misrouting connections. Clients that advertise services through the AVAILABLE_SERVICES Capsule may inadvertently expose sensitive or private services. Proxy servers <span class="bcp14">MUST</span> verify that advertised services comply with organizational security policies.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">To avoid exposing local or internal services to unauthorized parties, clients <span class="bcp14">MUST</span> confirm identity of the proxy service that they connect to and allow inbound connections only to services that should be accessible from the proxy.<a href="#section-6-2" class="pilcrow">¶</a></p>
+<p id="section-6-3">Proxies providing Reverse HTTP Connect service over HTTP/1.1 <span class="bcp14">MUST</span> consistently authenticate clients on both Listener Control Channel and individual Connection Acceptance Requests. To minimize the risks of misrouting connection request to a rogue client, HTTP/1.1 Reverse Connect proxies <span class="bcp14">SHOULD</span> generate Request ID randomly instead of using a predictable sequence.<a href="#section-6-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
-<section id="section-4">
+<section id="section-7">
       <h2 id="name-iana-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-4-1">This document has no IANA actions.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<div id="http-upgrade-tokens">
+<section id="section-7.1">
+        <h3 id="name-http-upgrade-tokens">
+<a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-http-upgrade-tokens" class="section-name selfRef">HTTP Upgrade Tokens</a>
+        </h3>
+<p id="section-7.1-1">IF APPROVED, IANA is requested to add the following entries to the HTTP Upgrade Token Registry:<a href="#section-7.1-1" class="pilcrow">¶</a></p>
+<table class="center" id="table-1">
+          <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Value</th>
+              <th class="text-left" rowspan="1" colspan="1">Description</th>
+              <th class="text-left" rowspan="1" colspan="1">Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">"connect-listen"</td>
+              <td class="text-left" rowspan="1" colspan="1">Listening for inbound connection requests</td>
+              <td class="text-left" rowspan="1" colspan="1">(This document)</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">"connect-accept"</td>
+              <td class="text-left" rowspan="1" colspan="1">Accepting an inbound connection request</td>
+              <td class="text-left" rowspan="1" colspan="1">(This document)</td>
+            </tr>
+          </tbody>
+        </table>
+</section>
+</div>
+<div id="new-masque-default-templates">
+<section id="section-7.2">
+        <h3 id="name-new-masque-default-template">
+<a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-new-masque-default-template" class="section-name selfRef">New MASQUE Default Templates</a>
+        </h3>
+<p id="section-7.2-1">IF APPROVED, IANA is requested to add the following entries to the MASQUE URI Suffixes Registry:<a href="#section-7.2-1" class="pilcrow">¶</a></p>
+<table class="center" id="table-2">
+          <caption><a href="#table-2" class="selfRef">Table 2</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Value</th>
+              <th class="text-left" rowspan="1" colspan="1">Description</th>
+              <th class="text-left" rowspan="1" colspan="1">Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">"listen"</td>
+              <td class="text-left" rowspan="1" colspan="1">Listening for inbound connection requests</td>
+              <td class="text-left" rowspan="1" colspan="1">(This document)</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">"accept"</td>
+              <td class="text-left" rowspan="1" colspan="1">Accepting an inbound connection request</td>
+              <td class="text-left" rowspan="1" colspan="1">(This document)</td>
+            </tr>
+          </tbody>
+        </table>
+</section>
+</div>
+<div id="new-masque-default-templates-1">
+<section id="section-7.3">
+        <h3 id="name-new-masque-default-templates">
+<a href="#section-7.3" class="section-number selfRef">7.3. </a><a href="#name-new-masque-default-templates" class="section-name selfRef">New MASQUE Default Templates</a>
+        </h3>
+<p id="section-7.3-1">IF APPROVED, IANA is requested to add the following entries to the HTTP Capsule Types Registry:<a href="#section-7.3-1" class="pilcrow">¶</a></p>
+<table class="center" id="table-3">
+          <caption><a href="#table-3" class="selfRef">Table 3</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Value</th>
+              <th class="text-left" rowspan="1" colspan="1">Capsule Type</th>
+              <th class="text-left" rowspan="1" colspan="1">Status</th>
+              <th class="text-left" rowspan="1" colspan="1">Reference</th>
+              <th class="text-left" rowspan="1" colspan="1">Change Controller</th>
+              <th class="text-left" rowspan="1" colspan="1">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">(TBD)</td>
+              <td class="text-left" rowspan="1" colspan="1">AVAILABLE_SERVICES</td>
+              <td class="text-left" rowspan="1" colspan="1">permanent</td>
+              <td class="text-left" rowspan="1" colspan="1">(This document)</td>
+              <td class="text-left" rowspan="1" colspan="1">IETF</td>
+              <td class="text-left" rowspan="1" colspan="1">MASQUE</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">(TBD)</td>
+              <td class="text-left" rowspan="1" colspan="1">CONNECTION_REQUEST</td>
+              <td class="text-left" rowspan="1" colspan="1">permanent</td>
+              <td class="text-left" rowspan="1" colspan="1">(This document)</td>
+              <td class="text-left" rowspan="1" colspan="1">IETF</td>
+              <td class="text-left" rowspan="1" colspan="1">MASQUE</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">(TBD)</td>
+              <td class="text-left" rowspan="1" colspan="1">CONNECTION_REQUEST_DECLINED</td>
+              <td class="text-left" rowspan="1" colspan="1">permanent</td>
+              <td class="text-left" rowspan="1" colspan="1">(This document)</td>
+              <td class="text-left" rowspan="1" colspan="1">IETF</td>
+              <td class="text-left" rowspan="1" colspan="1">MASQUE</td>
+            </tr>
+          </tbody>
+        </table>
+</section>
+</div>
 </section>
 </div>
 <div id="sec-normative-references">
-<section id="section-5">
+<section id="section-8">
       <h2 id="name-normative-references">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
       </h2>
 <dl class="references">
+<dt id="CONNECT-IP">[CONNECT-IP]</dt>
+      <dd>
+<span class="refAuthor">Pauly, T., Ed.</span>, <span class="refAuthor">Schinazi, D.</span>, <span class="refAuthor">Chernyakhovsky, A.</span>, <span class="refAuthor">Kühlewind, M.</span>, and <span class="refAuthor">M. Westerlund</span>, <span class="refTitle">"Proxying IP in HTTP"</span>, <span class="seriesInfo">RFC 9484</span>, <span class="seriesInfo">DOI 10.17487/RFC9484</span>, <time datetime="2023-10" class="refDate">October 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9484">https://www.rfc-editor.org/rfc/rfc9484</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="CONNECT-UDP">[CONNECT-UDP]</dt>
+      <dd>
+<span class="refAuthor">Schinazi, D.</span>, <span class="refTitle">"Proxying UDP in HTTP"</span>, <span class="seriesInfo">RFC 9298</span>, <span class="seriesInfo">DOI 10.17487/RFC9298</span>, <time datetime="2022-08" class="refDate">August 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9298">https://www.rfc-editor.org/rfc/rfc9298</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="HTTP">[HTTP]</dt>
+      <dd>
+<span class="refAuthor">Fielding, R., Ed.</span>, <span class="refAuthor">Nottingham, M., Ed.</span>, and <span class="refAuthor">J. Reschke, Ed.</span>, <span class="refTitle">"HTTP Semantics"</span>, <span class="seriesInfo">STD 97</span>, <span class="seriesInfo">RFC 9110</span>, <span class="seriesInfo">DOI 10.17487/RFC9110</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9110">https://www.rfc-editor.org/rfc/rfc9110</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="HTTP-DGRAM">[HTTP-DGRAM]</dt>
+      <dd>
+<span class="refAuthor">Schinazi, D.</span> and <span class="refAuthor">L. Pardue</span>, <span class="refTitle">"HTTP Datagrams and the Capsule Protocol"</span>, <span class="seriesInfo">RFC 9297</span>, <span class="seriesInfo">DOI 10.17487/RFC9297</span>, <time datetime="2022-08" class="refDate">August 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9297">https://www.rfc-editor.org/rfc/rfc9297</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="H1">[HTTP/1.1]</dt>
+      <dd>
+<span class="refAuthor">Fielding, R., Ed.</span>, <span class="refAuthor">Nottingham, M., Ed.</span>, and <span class="refAuthor">J. Reschke, Ed.</span>, <span class="refTitle">"HTTP/1.1"</span>, <span class="seriesInfo">STD 99</span>, <span class="seriesInfo">RFC 9112</span>, <span class="seriesInfo">DOI 10.17487/RFC9112</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9112">https://www.rfc-editor.org/rfc/rfc9112</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="H2">[HTTP/2]</dt>
+      <dd>
+<span class="refAuthor">Thomson, M., Ed.</span> and <span class="refAuthor">C. Benfield, Ed.</span>, <span class="refTitle">"HTTP/2"</span>, <span class="seriesInfo">RFC 9113</span>, <span class="seriesInfo">DOI 10.17487/RFC9113</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9113">https://www.rfc-editor.org/rfc/rfc9113</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="H3">[HTTP/3]</dt>
+      <dd>
+<span class="refAuthor">Bishop, M., Ed.</span>, <span class="refTitle">"HTTP/3"</span>, <span class="seriesInfo">RFC 9114</span>, <span class="seriesInfo">DOI 10.17487/RFC9114</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9114">https://www.rfc-editor.org/rfc/rfc9114</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
       <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TCP">[TCP]</dt>
+      <dd>
+<span class="refAuthor">Postel, J.</span>, <span class="refTitle">"Transmission Control Protocol"</span>, <span class="seriesInfo">RFC 793</span>, <span class="seriesInfo">DOI 10.17487/RFC0793</span>, <time datetime="1981-09" class="refDate">September 1981</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc793">https://www.rfc-editor.org/rfc/rfc793</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TEMPLATE">[TEMPLATE]</dt>
+      <dd>
+<span class="refAuthor">Gregorio, J.</span>, <span class="refAuthor">Fielding, R.</span>, <span class="refAuthor">Hadley, M.</span>, <span class="refAuthor">Nottingham, M.</span>, and <span class="refAuthor">D. Orchard</span>, <span class="refTitle">"URI Template"</span>, <span class="seriesInfo">RFC 6570</span>, <span class="seriesInfo">DOI 10.17487/RFC6570</span>, <time datetime="2012-03" class="refDate">March 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6570">https://www.rfc-editor.org/rfc/rfc6570</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="Template-TCPCONNECT">[Template-TCPCONNECT]</dt>
+      <dd>
+<span class="refAuthor">Schwartz, B. M.</span>, <span class="refTitle">"Template-Driven HTTP CONNECT Proxying for TCP"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-httpbis-connect-tcp-06</span>, <time datetime="2024-10-21" class="refDate">21 October 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-connect-tcp-06">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-connect-tcp-06</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="UDP">[UDP]</dt>
+      <dd>
+<span class="refAuthor">Postel, J.</span>, <span class="refTitle">"User Datagram Protocol"</span>, <span class="seriesInfo">STD 6</span>, <span class="seriesInfo">RFC 768</span>, <span class="seriesInfo">DOI 10.17487/RFC0768</span>, <time datetime="1980-08" class="refDate">August 1980</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc768">https://www.rfc-editor.org/rfc/rfc768</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="URI">[URI]</dt>
+    <dd>
+<span class="refAuthor">Berners-Lee, T.</span>, <span class="refAuthor">Fielding, R.</span>, and <span class="refAuthor">L. Masinter</span>, <span class="refTitle">"Uniform Resource Identifier (URI): Generic Syntax"</span>, <span class="seriesInfo">STD 66</span>, <span class="seriesInfo">RFC 3986</span>, <span class="seriesInfo">DOI 10.17487/RFC3986</span>, <time datetime="2005-01" class="refDate">January 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3986">https://www.rfc-editor.org/rfc/rfc3986</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
