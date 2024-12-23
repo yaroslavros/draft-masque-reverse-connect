@@ -13,7 +13,12 @@ Expires: 26 June 2025
 
 Abstract
 
-   TODO Abstract
+   This document specifies an extension to the HTTP CONNECT method,
+   enabling a proxy client to accept inbound TCP and UDP connections
+   proxied through HTTP/1.1, HTTP/2, or HTTP/3.  This mechanism allows
+   the client to dynamically advertise available local or internal
+   network services and expose them through a HTTP proxy without
+   reliance on IP routing.
 
 About This Document
 
@@ -188,10 +193,10 @@ Table of Contents
 
 4.1.  Listener Control Channel URI Template
 
-   Listener Control Channel template is similar to the one defined in
-   Section 3 of [CONNECT-IP] and it MAY contain two variables: "target"
-   and "ipproto".  These variables are used to define the scope of
-   network services that the client accepts connectivity for.
+   The Listener Control Channel template is similar to the one defined
+   in Section 3 of [CONNECT-IP] and it MAY contain two variables:
+   "target" and "ipproto".  These variables are used to define the scope
+   of network services that the client accepts connectivity for.
 
    Examples are shown below:
 
@@ -300,7 +305,7 @@ Table of Contents
    The server indicates a successful registration of the client as
    described in Section 4.5 of [CONNECT-IP].
 
-   Example of server confirming succesful registration of the client is
+   Example of server confirming successful registration of the client is
    provided below:
 
    HEADERS
@@ -351,7 +356,7 @@ Table of Contents
       hostname - 4: Destination is specified by an IPv4 address - 6:
       Destination is specified by an IPv6 address
 
-   Destination:  Contents of the Destination field is determined by the
+   Destination:  Content of the Destination field is determined by the
       Destination Type.  For local destination type destination contents
       is omitted.  IPv4 destination carries 32 bits of IPv4 address.
       IPv6 destination carries 128 bits of IPv6 address.  Hostname
@@ -568,7 +573,7 @@ Table of Contents
       Connection URI template for the proxy.
 
    A request that does not match the above restrictions is considered
-   malformed.  A proxy server recieving a malformed request MUST respond
+   malformed.  A proxy server receiving a malformed request MUST respond
    with an error and SHOULD use the 400 (Bad Request) status code.  If
    request_id template variable is not matching an outstanding
    connection request for given client, proxy server MUST respond with
@@ -612,9 +617,9 @@ Table of Contents
 
 5.3.  Establishing Connection
 
-   Once the client receives a succesful response from the proxy for the
-   request accepting the connection it estbalishes requested TCP or UDP
-   socket to a local or internal destiantion.  If the socket failed to
+   Once the client receives a successful response from the proxy for the
+   request accepting the connection it establishes requested TCP or UDP
+   socket to a local or internal destination.  If the socket failed to
    establish, the client MUST immediately close the request stream.
 
    For TCP flows, communicating parties carry TCP payload data in the
@@ -623,7 +628,7 @@ Table of Contents
    stream if TCP connection is terminated.
 
    UDP data is carried in DATAGRAM capsules or encoded in QUIC DATAGRAM
-   frames as exaplained in Section 5 of [CONNECT-UDP].  The lifetime of
+   frames as explained in Section 5 of [CONNECT-UDP].  The lifetime of
    the UDP socket is tied to the request stream as described in
    Section 3.1 of [CONNECT-UDP].
 
