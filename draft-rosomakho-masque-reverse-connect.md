@@ -45,7 +45,7 @@ informative:
 
 --- abstract
 
-TODO Abstract
+This document specifies an extension to the HTTP CONNECT method, enabling a proxy client to accept inbound TCP and UDP connections proxied through HTTP/1.1, HTTP/2, or HTTP/3. This mechanism allows the client to dynamically advertise available local or internal network services and expose them through a HTTP proxy without reliance on IP routing.
 
 
 --- middle
@@ -107,7 +107,7 @@ Additionally, the Listener Control Channel can carry optional Service Discovery 
 
 ## Listener Control Channel URI Template {#listener-template}
 
-Listener Control Channel template is similar to the one defined in {{Section 3 of CONNECT-IP}} and it MAY contain two variables: "target" and "ipproto". These variables are used to define the scope of network services that the client accepts connectivity for.
+The Listener Control Channel template is similar to the one defined in {{Section 3 of CONNECT-IP}} and it MAY contain two variables: "target" and "ipproto". These variables are used to define the scope of network services that the client accepts connectivity for.
 
 Examples are shown below:
 
@@ -190,7 +190,7 @@ capsule-protocol = ?1
 
 The server indicates a successful registration of the client as described in {{Section 4.5 of CONNECT-IP}}.
 
-Example of server confirming succesful registration of the client is provided below:
+Example of server confirming successful registration of the client is provided below:
 
 ~~~ http-message
 HEADERS
@@ -238,7 +238,7 @@ Destination Type:
 
 Destination:
 
-: Contents of the Destination field is determined by the Destination Type. For local destination type destination contents is omitted. IPv4 destination carries 32 bits of IPv4 address. IPv6 destination carries 128 bits of IPv6 address. Hostname destination (destination type 1) is provided in the following format:
+: Content of the Destination field is determined by the Destination Type. For local destination type destination contents is omitted. IPv4 destination carries 32 bits of IPv4 address. IPv6 destination carries 128 bits of IPv6 address. Hostname destination (destination type 1) is provided in the following format:
 
 ~~~
 Hostname_Destination {
@@ -384,7 +384,7 @@ When accepting an inbound connection over HTTP/2 {{H2}} or HTTP/3 {{H3}}, the cl
 * The :authority pseudo-header field SHALL contain the authority of the proxy.
 * The :path and :scheme pseudo-header fields SHALL contain the path and scheme of the request URI derived from the Accepting Connection URI template for the proxy.
 
-A request that does not match the above restrictions is considered malformed. A proxy server recieving a malformed request MUST respond with an error and SHOULD use the 400 (Bad Request) status code. If `request_id` template variable is not matching an outstanding connection request for given client, proxy server MUST respond with an error and SHOULD use the 404 (Not Found) status code.
+A request that does not match the above restrictions is considered malformed. A proxy server receiving a malformed request MUST respond with an error and SHOULD use the 400 (Bad Request) status code. If `request_id` template variable is not matching an outstanding connection request for given client, proxy server MUST respond with an error and SHOULD use the 404 (Not Found) status code.
 
 The proxy SHALL indicate a successful response by replying with the following requirements:
 
@@ -417,11 +417,11 @@ capsule-Protocol = ?1
 
 ## Establishing Connection
 
-Once the client receives a succesful response from the proxy for the request accepting the connection it estbalishes requested TCP or UDP socket to a local or internal destiantion. If the socket failed to establish, the client MUST immediately close the request stream.
+Once the client receives a successful response from the proxy for the request accepting the connection it establishes requested TCP or UDP socket to a local or internal destination. If the socket failed to establish, the client MUST immediately close the request stream.
 
 For TCP flows, communicating parties carry TCP payload data in the payload of DATA Capsules over the established stream according to {{Section 8.3 of !Template-TCPCONNECT=I-D.ietf-httpbis-connect-tcp}}. Either party MAY close the stream if TCP connection is terminated.
 
-UDP data is carried in DATAGRAM capsules or encoded in QUIC DATAGRAM frames as exaplained in {{Section 5 of !CONNECT-UDP=RFC9298}}. The lifetime of the UDP socket is tied to the request stream as described in {{Section 3.1 of CONNECT-UDP}}.
+UDP data is carried in DATAGRAM capsules or encoded in QUIC DATAGRAM frames as explained in {{Section 5 of !CONNECT-UDP=RFC9298}}. The lifetime of the UDP socket is tied to the request stream as described in {{Section 3.1 of CONNECT-UDP}}.
 
 # Security Considerations
 
