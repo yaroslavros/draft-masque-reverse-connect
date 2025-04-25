@@ -4,8 +4,8 @@
 
 Multiplexed Application Substrate over QUIC Encryption      Y. Rosomakho
 Internet-Draft                                                   Zscaler
-Intended status: Standards Track                        23 December 2024
-Expires: 26 June 2025
+Intended status: Standards Track                           25 April 2025
+Expires: 27 October 2025
 
 
                   Reverse HTTP CONNECT for TCP and UDP
@@ -54,11 +54,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 June 2025.
+   This Internet-Draft will expire on 27 October 2025.
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -350,10 +350,15 @@ Table of Contents
    contains the following fields:
 
    Destination Type:  A single byte value defining type and format of
-      Destination field.  Valid destination types are: - 0: Destination
-      is local for the client. - 1: Destination is specified by a
-      hostname. - 4: Destination is specified by an IPv4 address. - 6:
-      Destination is specified by an IPv6 address.
+      Destination field.  Valid destination types are:
+
+   *  0: Destination is local for the client.
+
+   *  1: Destination is specified by a hostname.
+
+   *  4: Destination is specified by an IPv4 address.
+
+   *  6: Destination is specified by an IPv6 address.
 
    Destination:  Content of the Destination field is determined by the
       Destination Type.  For local destination type destination is
@@ -767,9 +772,9 @@ Table of Contents
    [Template-TCPCONNECT]
               Schwartz, B. M., "Template-Driven HTTP CONNECT Proxying
               for TCP", Work in Progress, Internet-Draft, draft-ietf-
-              httpbis-connect-tcp-06, 21 October 2024,
+              httpbis-connect-tcp-07, 17 March 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
-              connect-tcp-06>.
+              connect-tcp-07>.
 
    [UDP]      Postel, J., "User Datagram Protocol", STD 6, RFC 768,
               DOI 10.17487/RFC0768, August 1980,
