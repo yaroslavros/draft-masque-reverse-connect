@@ -231,6 +231,7 @@ Each service record represents potential connection destination and contains the
 Destination Type:
 
 : A single byte value defining type and format of Destination field. Valid destination types are:
+
 - 0: Destination is local for the client.
 - 1: Destination is specified by a hostname.
 - 4: Destination is specified by an IPv4 address.
