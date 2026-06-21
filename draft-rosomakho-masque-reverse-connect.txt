@@ -4,8 +4,8 @@
 
 Multiplexed Application Substrate over QUIC Encryption      Y. Rosomakho
 Internet-Draft                                                   Zscaler
-Intended status: Standards Track                           25 April 2025
-Expires: 27 October 2025
+Intended status: Standards Track                            21 June 2026
+Expires: 23 December 2026
 
 
                   Reverse HTTP CONNECT for TCP and UDP
@@ -54,11 +54,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 October 2025.
+   This Internet-Draft will expire on 23 December 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -772,9 +772,9 @@ Table of Contents
    [Template-TCPCONNECT]
               Schwartz, B. M., "Template-Driven HTTP CONNECT Proxying
               for TCP", Work in Progress, Internet-Draft, draft-ietf-
-              httpbis-connect-tcp-07, 17 March 2025,
+              httpbis-connect-tcp-11, 20 March 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
-              connect-tcp-07>.
+              connect-tcp-11>.
 
    [UDP]      Postel, J., "User Datagram Protocol", STD 6, RFC 768,
               DOI 10.17487/RFC0768, August 1980,
